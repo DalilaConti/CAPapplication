@@ -49,5 +49,15 @@
         "toggles": true
       }
     }
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/myApp.db"
+        }
+      }
+    }
   }
 }

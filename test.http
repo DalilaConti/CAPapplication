@@ -1,0 +1,35 @@
+###
+#
+# Browse Books
+#
+GET http://localhost:4004/catalog/Products?
+  # &$select=name,stock
+  # &$expand=price
+  # &sap-language=de
+
+###
+#
+# Get Product wit ID 1
+#
+GET http://localhost:4004/catalog/Products(1)
+
+###
+#
+# Update Product with ID 1
+#
+POST http://localhost:4004/catalog/Products
+Content-Type: application/json
+
+{"ID": 12, "Name": "Some product"}
+
+
+###
+#
+# Order a Book
+#
+POST http://localhost:4004/catalog/Orders
+Content-Type: application/json;IEEE754Compatible=true
+
+{"ID": 4, "Amount": 4}
+
+

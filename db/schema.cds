@@ -2,14 +2,14 @@ namespace my.App;
 
 entity Products {
     key ID          : Integer;
-        Name        : String;
+        Name        : String not null;
         Description : String;
         Stock       : Integer;
         Price       : Decimal(16, 2);
 
 };
 
-entity Supplier {
+entity Suppliers {
     key ID         : Integer;
         Name       : String;
         City       : String;
@@ -17,4 +17,11 @@ entity Supplier {
         PostalCode : String(5);
         Country    : String(3);
         Email      : String;
+};
+
+entity Orders {
+    key ID      : Integer;
+        Product : Association to many Products;
+        Amount  : Integer;
+
 };
