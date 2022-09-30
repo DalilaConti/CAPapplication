@@ -21,7 +21,7 @@ entity Suppliers {
 
 entity Orders {
     key ID      : Integer;
-        Product : Association to many Products;
+        Product : Association to Products;
         Amount  : Integer;
 
 };
